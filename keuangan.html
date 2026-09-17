@@ -1,0 +1,1330 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>
+        Keuangan - Karang Taruna Wistara Madhika
+    </title>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div class="logo">
+
+            Karang Taruna
+
+            <span>
+                Wistara Madhika
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Beranda
+            </a>
+
+            <a href="tentang.html">
+                Tentang Kami
+            </a>
+
+            <a href="artikel.html">
+                Artikel
+            </a>
+
+            <a href="kegiatan.html">
+                Kegiatan
+            </a>
+
+            <a href="keuangan.html">
+                Keuangan
+            </a>
+
+            <a href="administrasi.html">
+                Administrasi
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         KEUANGAN ORGANISASI
+    ====================================================== -->
+
+    <section class="finance">
+
+
+        <!-- LOGIN BENDAHARA -->
+
+        <div class="finance-login">
+
+            <a href="login.html">
+                Login Bendahara
+            </a>
+
+        </div>
+
+
+
+        <!-- JUDUL -->
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                TRANSPARANSI KEUANGAN
+            </p>
+
+            <h2>
+                Keuangan Karang Taruna
+            </h2>
+
+            <p>
+                Informasi keuangan Karang Taruna Wistara Madhika
+                disajikan secara terbuka sebagai bentuk transparansi,
+                tanggung jawab, dan kepercayaan bersama.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             RINGKASAN KEUANGAN
+        ================================================== -->
+
+        <div class="finance-overview">
+
+
+            <div class="finance-overview-card">
+
+                <p>
+                    TOTAL DANA MASUK
+                </p>
+
+                <h3 id="totalDanaMasuk">
+                    Rp0
+                </h3>
+
+            </div>
+
+
+
+            <div class="finance-overview-card">
+
+                <p>
+                    TOTAL DANA KELUAR
+                </p>
+
+                <h3 id="totalDanaKeluar">
+                    Rp0
+                </h3>
+
+            </div>
+
+
+
+            <div class="finance-overview-card">
+
+                <p>
+                    SALDO ORGANISASI
+                </p>
+
+                <h3 id="saldoOrganisasi">
+                    Rp0
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SUMBER DANA
+        ================================================== -->
+
+        <div class="finance-summary">
+
+
+            <div class="finance-card">
+
+                <p>
+                    SUMBER DANA
+                </p>
+
+                <h3>
+                    Uang Kas
+                </h3>
+
+                <span id="totalUangKas">
+                    Rp0
+                </span>
+
+            </div>
+
+
+
+            <div class="finance-card">
+
+                <p>
+                    SUMBER DANA
+                </p>
+
+                <h3>
+                    Sponsor
+                </h3>
+
+                <span id="totalSponsor">
+                    Rp0
+                </span>
+
+            </div>
+
+
+
+            <div class="finance-card">
+
+                <p>
+                    SUMBER DANA
+                </p>
+
+                <h3>
+                    Pemerintahan Desa
+                </h3>
+
+                <span id="totalPemerintahan">
+                    Rp0
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         KAS ANGGOTA 2026
+    ====================================================== -->
+
+    <section class="finance-table-section">
+
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                KAS ANGGOTA
+            </p>
+
+            <h2>
+                Kas Anggota 2026
+            </h2>
+
+            <p>
+                Rekap pembayaran iuran kas anggota Karang Taruna
+                Wistara Madhika selama tahun 2026.
+                Iuran kas ditetapkan sebesar Rp10.000
+                per anggota setiap bulan.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             RINGKASAN KAS ANGGOTA
+        ================================================== -->
+
+        <div class="finance-summary">
+
+
+            <div class="finance-card">
+
+                <p>
+                    IURAN PER BULAN
+                </p>
+
+                <h3>
+                    Rp10.000
+                </h3>
+
+            </div>
+
+
+
+            <div class="finance-card">
+
+                <p>
+                    SALDO KAS ANGGOTA
+                </p>
+
+                <h3 id="saldoKasAnggota">
+                    Rp0
+                </h3>
+
+            </div>
+
+
+
+            <div class="finance-card">
+
+                <p>
+                    TOTAL ANGGOTA
+                </p>
+
+                <h3 id="totalAnggota">
+                    0 Orang
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             TABEL KAS ANGGOTA
+        ================================================== -->
+
+        <div class="finance-table-container">
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Nama Anggota
+                        </th>
+
+                        <th>
+                            Jan
+                        </th>
+
+                        <th>
+                            Feb
+                        </th>
+
+                        <th>
+                            Mar
+                        </th>
+
+                        <th>
+                            Apr
+                        </th>
+
+                        <th>
+                            Mei
+                        </th>
+
+                        <th>
+                            Jun
+                        </th>
+
+                        <th>
+                            Jul
+                        </th>
+
+                        <th>
+                            Agu
+                        </th>
+
+                        <th>
+                            Sep
+                        </th>
+
+                        <th>
+                            Okt
+                        </th>
+
+                        <th>
+                            Nov
+                        </th>
+
+                        <th>
+                            Des
+                        </th>
+
+                        <th>
+                            Total
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="kasAnggotaPublicTable">
+                </tbody>
+
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RIWAYAT TRANSAKSI
+    ====================================================== -->
+
+    <section class="finance-table-section">
+
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                RIWAYAT KEUANGAN
+            </p>
+
+            <h2>
+                Riwayat Transaksi
+            </h2>
+
+            <p>
+                Catatan pemasukan dan pengeluaran organisasi
+                selain rekap iuran kas anggota.
+            </p>
+
+        </div>
+
+
+
+        <div class="finance-table-container">
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Tanggal
+                        </th>
+
+                        <th>
+                            Nama
+                        </th>
+
+                        <th>
+                            Sumber Dana
+                        </th>
+
+                        <th>
+                            Keterangan
+                        </th>
+
+                        <th>
+                            Dana Masuk
+                        </th>
+
+                        <th>
+                            Dana Keluar
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="riwayatTransaksiPublic">
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <h3>
+                    Karang Taruna Wistara Madhika
+                </h3>
+
+                <p>
+                    Bersama membangun, berkarya, dan mengabdi
+                    untuk masyarakat.
+                </p>
+
+                <p>
+                    RT 08, Kelurahan Pagerkukuh,
+                    Kabupaten Wonosobo, Jawa Tengah.
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3>
+                    Kontak
+                </h3>
+
+                <p>
+                    Email:
+                    kartarwistaramadhika@gmail.com
+                </p>
+
+                <p>
+                    Instagram:
+                    Wistara Madhika Official
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Karang Taruna Wistara Madhika.
+                Semua hak dilindungi.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* =================================================
+           DATA LOCAL STORAGE
+        ================================================== */
+
+        const transaksi =
+            JSON.parse(
+                localStorage.getItem(
+                    "transaksiKartar"
+                )
+            ) || [];
+
+
+        const kasAnggota =
+            JSON.parse(
+                localStorage.getItem(
+                    "kasAnggotaKartar"
+                )
+            ) || [];
+
+
+
+        /* =================================================
+           DAFTAR BULAN
+        ================================================== */
+
+        const bulan = [
+
+            "Januari",
+            "Februari",
+            "Maret",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Agustus",
+            "September",
+            "Oktober",
+            "November",
+            "Desember"
+
+        ];
+
+
+
+        /* =================================================
+           FORMAT RUPIAH
+        ================================================== */
+
+        function formatRupiah(angka) {
+
+            return new Intl.NumberFormat(
+                "id-ID",
+                {
+                    style: "currency",
+                    currency: "IDR",
+                    minimumFractionDigits: 0
+                }
+            ).format(angka);
+
+        }
+
+
+
+        /* =================================================
+           FORMAT TANGGAL
+        ================================================== */
+
+        function formatTanggal(tanggal) {
+
+            if (!tanggal) {
+                return "-";
+            }
+
+
+            const bagian =
+                tanggal.split("-");
+
+
+            if (bagian.length !== 3) {
+                return tanggal;
+            }
+
+
+            return (
+                bagian[2] +
+                "/" +
+                bagian[1] +
+                "/" +
+                bagian[0]
+            );
+
+        }
+
+
+
+        /* =================================================
+           AMANKAN TEKS
+        ================================================== */
+
+        function escapeHtml(value) {
+
+            return String(value ?? "")
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+
+        }
+
+
+
+        /* =================================================
+           MEMBUAT DATA ANGGOTA
+        ================================================== */
+
+        function buatDataAnggota() {
+
+            const dataAnggota = [];
+
+
+            kasAnggota.forEach(
+                function(item) {
+
+                    const nama =
+                        String(
+                            item.nama || ""
+                        ).trim();
+
+
+                    if (!nama) {
+                        return;
+                    }
+
+
+                    let anggota =
+                        dataAnggota.find(
+                            function(data) {
+
+                                return (
+                                    data.nama
+                                        .toLowerCase() ===
+                                    nama.toLowerCase()
+                                );
+
+                            }
+                        );
+
+
+                    if (!anggota) {
+
+                        anggota = {
+
+                            nama: nama,
+
+                            pembayaran: {}
+
+                        };
+
+
+                        dataAnggota.push(
+                            anggota
+                        );
+
+                    }
+
+
+                    anggota.pembayaran[
+                        item.bulan
+                    ] =
+                        Number(
+                            item.nominal
+                        ) || 0;
+
+                }
+            );
+
+
+            return dataAnggota;
+
+        }
+
+
+
+        /* =================================================
+           TAMPILKAN KAS ANGGOTA
+        ================================================== */
+
+        function tampilkanKasAnggota() {
+
+            const table =
+                document.getElementById(
+                    "kasAnggotaPublicTable"
+                );
+
+
+            table.innerHTML = "";
+
+
+            const dataAnggota =
+                buatDataAnggota();
+
+
+            if (
+                dataAnggota.length === 0
+            ) {
+
+                table.innerHTML = `
+
+                    <tr>
+
+                        <td colspan="14">
+
+                            Belum ada data pembayaran
+                            kas anggota.
+
+                        </td>
+
+                    </tr>
+
+                `;
+
+                return;
+
+            }
+
+
+
+            dataAnggota.forEach(
+                function(anggota) {
+
+                    const row =
+                        document.createElement(
+                            "tr"
+                        );
+
+
+                    let total = 0;
+
+
+                    let html = `
+
+                        <td>
+                            ${escapeHtml(
+                                anggota.nama
+                            )}
+                        </td>
+
+                    `;
+
+
+                    bulan.forEach(
+                        function(namaBulan) {
+
+                            const nominal =
+                                Number(
+                                    anggota.pembayaran[
+                                        namaBulan
+                                    ]
+                                ) || 0;
+
+
+                            if (
+                                nominal > 0
+                            ) {
+
+                                html += `
+
+                                    <td>
+                                        ${formatRupiah(
+                                            nominal
+                                        )}
+                                    </td>
+
+                                `;
+
+
+                                total +=
+                                    nominal;
+
+                            }
+
+                            else {
+
+                                html += `
+
+                                    <td>
+                                        -
+                                    </td>
+
+                                `;
+
+                            }
+
+                        }
+                    );
+
+
+                    html += `
+
+                        <td>
+                            ${formatRupiah(
+                                total
+                            )}
+                        </td>
+
+                    `;
+
+
+                    row.innerHTML =
+                        html;
+
+
+                    table.appendChild(
+                        row
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =================================================
+           UPDATE KAS ANGGOTA
+        ================================================== */
+
+        function updateKasAnggota() {
+
+            let totalKas = 0;
+
+
+            kasAnggota.forEach(
+                function(item) {
+
+                    totalKas +=
+                        Number(
+                            item.nominal
+                        ) || 0;
+
+                }
+            );
+
+
+            document.getElementById(
+                "saldoKasAnggota"
+            ).textContent =
+                formatRupiah(
+                    totalKas
+                );
+
+
+
+            const daftarNama = [];
+
+
+            kasAnggota.forEach(
+                function(item) {
+
+                    const nama =
+                        String(
+                            item.nama || ""
+                        )
+                        .trim()
+                        .toLowerCase();
+
+
+                    if (
+                        nama &&
+                        !daftarNama.includes(
+                            nama
+                        )
+                    ) {
+
+                        daftarNama.push(
+                            nama
+                        );
+
+                    }
+
+                }
+            );
+
+
+            document.getElementById(
+                "totalAnggota"
+            ).textContent =
+                daftarNama.length +
+                " Orang";
+
+        }
+
+
+
+        /* =================================================
+           UPDATE RINGKASAN KEUANGAN
+        ================================================== */
+
+        function updateRingkasanKeuangan() {
+
+            let totalMasuk = 0;
+
+            let totalKeluar = 0;
+
+
+
+            transaksi.forEach(
+                function(item) {
+
+                    const nominal =
+                        Number(
+                            item.nominal
+                        ) || 0;
+
+
+                    if (
+                        item.jenis ===
+                        "masuk"
+                    ) {
+
+                        totalMasuk +=
+                            nominal;
+
+                    }
+
+
+                    if (
+                        item.jenis ===
+                        "keluar"
+                    ) {
+
+                        totalKeluar +=
+                            nominal;
+
+                    }
+
+                }
+            );
+
+
+
+            kasAnggota.forEach(
+                function(item) {
+
+                    totalMasuk +=
+                        Number(
+                            item.nominal
+                        ) || 0;
+
+                }
+            );
+
+
+
+            const saldo =
+                totalMasuk -
+                totalKeluar;
+
+
+
+            document.getElementById(
+                "totalDanaMasuk"
+            ).textContent =
+                formatRupiah(
+                    totalMasuk
+                );
+
+
+            document.getElementById(
+                "totalDanaKeluar"
+            ).textContent =
+                formatRupiah(
+                    totalKeluar
+                );
+
+
+            document.getElementById(
+                "saldoOrganisasi"
+            ).textContent =
+                formatRupiah(
+                    saldo
+                );
+
+        }
+
+
+
+        /* =================================================
+           UPDATE SUMBER DANA
+        ================================================== */
+
+        function updateSumberDana() {
+
+            let uangKas = 0;
+
+            let sponsor = 0;
+
+            let pemerintahan = 0;
+
+
+
+            /*
+             * Semua iuran anggota
+             * masuk sebagai Uang Kas.
+             */
+
+            kasAnggota.forEach(
+                function(item) {
+
+                    uangKas +=
+                        Number(
+                            item.nominal
+                        ) || 0;
+
+                }
+            );
+
+
+
+            transaksi.forEach(
+                function(item) {
+
+                    if (
+                        item.jenis !==
+                        "masuk"
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    const nominal =
+                        Number(
+                            item.nominal
+                        ) || 0;
+
+
+
+                    if (
+                        item.sumber ===
+                        "Sponsor"
+                    ) {
+
+                        sponsor +=
+                            nominal;
+
+                    }
+
+
+                    if (
+                        item.sumber ===
+                        "Pemerintahan Desa"
+                    ) {
+
+                        pemerintahan +=
+                            nominal;
+
+                    }
+
+
+                    if (
+                        item.sumber ===
+                        "Uang Kas"
+                    ) {
+
+                        uangKas +=
+                            nominal;
+
+                    }
+
+                }
+            );
+
+
+
+            document.getElementById(
+                "totalUangKas"
+            ).textContent =
+                formatRupiah(
+                    uangKas
+                );
+
+
+            document.getElementById(
+                "totalSponsor"
+            ).textContent =
+                formatRupiah(
+                    sponsor
+                );
+
+
+            document.getElementById(
+                "totalPemerintahan"
+            ).textContent =
+                formatRupiah(
+                    pemerintahan
+                );
+
+        }
+
+
+
+        /* =================================================
+           RIWAYAT TRANSAKSI
+        ================================================== */
+
+        function tampilkanRiwayatTransaksi() {
+
+            const table =
+                document.getElementById(
+                    "riwayatTransaksiPublic"
+                );
+
+
+            table.innerHTML = "";
+
+
+            const semuaTransaksi =
+                [...transaksi];
+
+
+            if (
+                semuaTransaksi.length === 0
+            ) {
+
+                table.innerHTML = `
+
+                    <tr>
+
+                        <td colspan="6">
+
+                            Belum ada transaksi.
+
+                        </td>
+
+                    </tr>
+
+                `;
+
+                return;
+
+            }
+
+
+
+            /*
+             * Transaksi terbaru di atas.
+             */
+
+            semuaTransaksi.sort(
+                function(a, b) {
+
+                    return (
+                        new Date(b.tanggal) -
+                        new Date(a.tanggal)
+                    );
+
+                }
+            );
+
+
+
+            semuaTransaksi.forEach(
+                function(item) {
+
+                    const row =
+                        document.createElement(
+                            "tr"
+                        );
+
+
+                    let danaMasuk = "-";
+
+                    let danaKeluar = "-";
+
+
+                    if (
+                        item.jenis ===
+                        "masuk"
+                    ) {
+
+                        danaMasuk =
+                            formatRupiah(
+                                Number(
+                                    item.nominal
+                                ) || 0
+                            );
+
+                    }
+
+
+                    if (
+                        item.jenis ===
+                        "keluar"
+                    ) {
+
+                        danaKeluar =
+                            formatRupiah(
+                                Number(
+                                    item.nominal
+                                ) || 0
+                            );
+
+                    }
+
+
+
+                    row.innerHTML = `
+
+                        <td>
+                            ${formatTanggal(
+                                item.tanggal
+                            )}
+                        </td>
+
+                        <td>
+                            ${escapeHtml(
+                                item.nama
+                            )}
+                        </td>
+
+                        <td>
+                            ${escapeHtml(
+                                item.sumber
+                            )}
+                        </td>
+
+                        <td>
+                            ${escapeHtml(
+                                item.keterangan
+                            )}
+                        </td>
+
+                        <td>
+                            ${danaMasuk}
+                        </td>
+
+                        <td>
+                            ${danaKeluar}
+                        </td>
+
+                    `;
+
+
+                    table.appendChild(
+                        row
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =================================================
+           JALANKAN
+        ================================================== */
+
+        tampilkanKasAnggota();
+
+        updateKasAnggota();
+
+        updateRingkasanKeuangan();
+
+        updateSumberDana();
+
+        tampilkanRiwayatTransaksi();
+
+
+    </script>
+
+
+</body>
+
+</html>
+```

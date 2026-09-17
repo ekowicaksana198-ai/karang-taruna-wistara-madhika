@@ -1,0 +1,2300 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<link rel="stylesheet" href="style.css">
+
+<title>
+    Dashboard Bendahara - Karang Taruna Wistara Madhika
+</title>
+```
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+```
+<div class="header-container">
+
+    <a
+        href="index.html"
+        class="logo"
+    >
+
+        <div class="logo-mark">
+            WM
+        </div>
+
+        <div class="logo-text">
+
+            <strong>
+                Karang Taruna
+            </strong>
+
+            <span>
+                Wistara Madhika
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">
+            Beranda
+        </a>
+
+        <a href="tentang.html">
+            Tentang Kami
+        </a>
+
+        <a href="artikel.html">
+            Artikel
+        </a>
+
+        <a href="kegiatan.html">
+            Kegiatan
+        </a>
+
+        <a href="keuangan.html">
+            Keuangan
+        </a>
+
+        <a href="administrasi.html">
+            Administrasi
+        </a>
+
+    </nav>
+
+</div>
+```
+
+</header>
+
+<!-- =====================================================
+     DASHBOARD BENDAHARA
+====================================================== -->
+
+<main class="bendahara-dashboard">
+
+```
+<!-- =================================================
+     HEADER DASHBOARD
+================================================== -->
+
+<section class="bendahara-heading">
+
+    <div class="bendahara-heading-text">
+
+        <p class="section-label">
+            PANEL PENGURUS
+        </p>
+
+
+        <h1>
+            Dashboard Bendahara
+        </h1>
+
+
+        <p>
+            Kelola pemasukan, pengeluaran, dan iuran kas
+            anggota Karang Taruna Wistara Madhika.
+        </p>
+
+    </div>
+
+
+    <a
+        href="login.html"
+        class="logout-button"
+    >
+        Logout
+    </a>
+
+</section>
+
+
+
+<!-- =================================================
+     RINGKASAN KEUANGAN
+================================================== -->
+
+<section class="bendahara-summary">
+
+
+    <div class="bendahara-summary-card">
+
+        <p>
+            TOTAL DANA MASUK
+        </p>
+
+
+        <h2 id="totalMasuk">
+            Rp0
+        </h2>
+
+        <span>
+            Seluruh pemasukan organisasi
+        </span>
+
+    </div>
+
+
+
+    <div class="bendahara-summary-card">
+
+        <p>
+            TOTAL DANA KELUAR
+        </p>
+
+
+        <h2 id="totalKeluar">
+            Rp0
+        </h2>
+
+        <span>
+            Seluruh pengeluaran organisasi
+        </span>
+
+    </div>
+
+
+
+    <div class="bendahara-summary-card">
+
+        <p>
+            SALDO ORGANISASI
+        </p>
+
+
+        <h2 id="saldoOrganisasi">
+            Rp0
+        </h2>
+
+        <span>
+            Saldo setelah pemasukan dan pengeluaran
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     KAS ANGGOTA
+================================================== -->
+
+<section class="bendahara-form-section">
+
+
+    <div class="bendahara-section-heading">
+
+        <p class="section-label">
+            KAS ANGGOTA
+        </p>
+
+
+        <h2 id="judulKasForm">
+            Tambah Pembayaran Iuran
+        </h2>
+
+
+        <p>
+            Catat pembayaran iuran kas anggota.
+            Besaran iuran ditetapkan sebesar
+            Rp10.000 per anggota setiap bulan.
+        </p>
+
+    </div>
+
+
+
+    <form
+        id="kasForm"
+        class="bendahara-form"
+    >
+
+
+        <div class="form-group">
+
+            <label for="namaAnggota">
+                Nama Anggota
+            </label>
+
+            <input
+                type="text"
+                id="namaAnggota"
+                placeholder="Contoh: Andi"
+                autocomplete="off"
+                required
+            >
+
+        </div>
+
+
+
+        <div class="form-group">
+
+            <label for="bulanKas">
+                Bulan
+            </label>
+
+            <select
+                id="bulanKas"
+                required
+            >
+
+                <option value="">
+                    Pilih bulan
+                </option>
+
+                <option value="Januari">
+                    Januari
+                </option>
+
+                <option value="Februari">
+                    Februari
+                </option>
+
+                <option value="Maret">
+                    Maret
+                </option>
+
+                <option value="April">
+                    April
+                </option>
+
+                <option value="Mei">
+                    Mei
+                </option>
+
+                <option value="Juni">
+                    Juni
+                </option>
+
+                <option value="Juli">
+                    Juli
+                </option>
+
+                <option value="Agustus">
+                    Agustus
+                </option>
+
+                <option value="September">
+                    September
+                </option>
+
+                <option value="Oktober">
+                    Oktober
+                </option>
+
+                <option value="November">
+                    November
+                </option>
+
+                <option value="Desember">
+                    Desember
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+            <label for="nominalKas">
+                Nominal
+            </label>
+
+            <input
+                type="number"
+                id="nominalKas"
+                value="10000"
+                min="10000"
+                max="10000"
+                step="1000"
+                required
+            >
+
+        </div>
+
+
+
+        <div class="form-group">
+
+            <label for="tanggalKas">
+                Tanggal Pembayaran
+            </label>
+
+            <input
+                type="date"
+                id="tanggalKas"
+                required
+            >
+
+        </div>
+
+
+
+        <div class="form-submit">
+
+            <button
+                type="submit"
+                id="tombolKas"
+            >
+                Tambah Pembayaran
+            </button>
+
+
+            <button
+                type="button"
+                id="batalEditKas"
+                style="display: none;"
+            >
+                Batal Edit
+            </button>
+
+        </div>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- =================================================
+     REKAP KAS ANGGOTA
+================================================== -->
+
+<section class="bendahara-table-section">
+
+
+    <div class="bendahara-section-heading">
+
+        <p class="section-label">
+            REKAP KAS ANGGOTA
+        </p>
+
+
+        <h2>
+            Pembayaran Kas Anggota
+        </h2>
+
+
+        <p>
+            Daftar pembayaran iuran kas anggota
+            yang telah dicatat oleh bendahara.
+        </p>
+
+    </div>
+
+
+
+    <div class="bendahara-table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Nama Anggota
+                    </th>
+
+                    <th>
+                        Bulan
+                    </th>
+
+                    <th>
+                        Nominal
+                    </th>
+
+                    <th>
+                        Tanggal Pembayaran
+                    </th>
+
+                    <th>
+                        Aksi
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="kasAnggotaTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     TRANSAKSI ORGANISASI
+================================================== -->
+
+<section class="bendahara-form-section">
+
+
+    <div class="bendahara-section-heading">
+
+        <p class="section-label">
+            TRANSAKSI ORGANISASI
+        </p>
+
+
+        <h2 id="judulTransaksiForm">
+            Tambah Transaksi
+        </h2>
+
+
+        <p>
+            Catat pemasukan atau pengeluaran organisasi
+            selain pembayaran iuran kas anggota.
+        </p>
+
+    </div>
+
+
+
+    <form
+        id="transaksiForm"
+        class="bendahara-form"
+    >
+
+
+        <div class="form-group">
+
+            <label for="tanggalTransaksi">
+                Tanggal
+            </label>
+
+            <input
+                type="date"
+                id="tanggalTransaksi"
+                required
+            >
+
+        </div>
+
+
+
+        <div class="form-group">
+
+            <label for="namaTransaksi">
+                Nama
+            </label>
+
+            <input
+                type="text"
+                id="namaTransaksi"
+                placeholder="Contoh: PT ABC"
+                autocomplete="off"
+                required
+            >
+
+        </div>
+
+
+
+        <div class="form-group">
+
+            <label for="sumberDana">
+                Sumber Dana
+            </label>
+
+            <select
+                id="sumberDana"
+                required
+            >
+
+                <option value="">
+                    Pilih sumber dana
+                </option>
+
+                <option value="Uang Kas">
+                    Uang Kas
+                </option>
+
+                <option value="Sponsor">
+                    Sponsor
+                </option>
+
+                <option value="Pemerintahan Desa">
+                    Pemerintahan Desa
+                </option>
+
+                <option value="Lainnya">
+                    Lainnya
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+            <label for="jenisTransaksi">
+                Jenis Transaksi
+            </label>
+
+            <select
+                id="jenisTransaksi"
+                required
+            >
+
+                <option value="">
+                    Pilih jenis transaksi
+                </option>
+
+                <option value="masuk">
+                    Dana Masuk
+                </option>
+
+                <option value="keluar">
+                    Dana Keluar
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="form-group form-full">
+
+            <label for="keteranganTransaksi">
+                Keterangan
+            </label>
+
+            <textarea
+                id="keteranganTransaksi"
+                placeholder="Contoh: Dukungan kegiatan HUT RI"
+                required
+            ></textarea>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+            <label for="nominalTransaksi">
+                Nominal
+            </label>
+
+            <input
+                type="number"
+                id="nominalTransaksi"
+                placeholder="Contoh: 1500000"
+                min="1"
+                step="1000"
+                required
+            >
+
+        </div>
+
+
+
+        <div class="form-submit">
+
+            <button
+                type="submit"
+                id="tombolTransaksi"
+            >
+                Simpan Transaksi
+            </button>
+
+
+            <button
+                type="button"
+                id="batalEditTransaksi"
+                style="display: none;"
+            >
+                Batal Edit
+            </button>
+
+        </div>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- =================================================
+     RIWAYAT TRANSAKSI
+================================================== -->
+
+<section class="bendahara-table-section">
+
+
+    <div class="bendahara-section-heading">
+
+        <p class="section-label">
+            DATA TERBARU
+        </p>
+
+
+        <h2>
+            Riwayat Transaksi
+        </h2>
+
+
+        <p>
+            Daftar pemasukan dan pengeluaran organisasi
+            yang telah dicatat oleh bendahara.
+        </p>
+
+    </div>
+
+
+
+    <div class="bendahara-table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Tanggal
+                    </th>
+
+                    <th>
+                        Nama
+                    </th>
+
+                    <th>
+                        Sumber Dana
+                    </th>
+
+                    <th>
+                        Keterangan
+                    </th>
+
+                    <th>
+                        Dana Masuk
+                    </th>
+
+                    <th>
+                        Dana Keluar
+                    </th>
+
+                    <th>
+                        Aksi
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="transaksiTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+</section>
+```
+
+</main>
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+```
+<div class="footer-container">
+
+
+    <div class="footer-brand">
+
+        <h3>
+            Karang Taruna Wistara Madhika
+        </h3>
+
+        <p>
+            Bersama membangun, berkarya, dan mengabdi
+            untuk masyarakat.
+        </p>
+
+    </div>
+
+
+
+    <div class="footer-column">
+
+        <h4>
+            Informasi
+        </h4>
+
+        <a href="tentang.html">
+            Tentang Kami
+        </a>
+
+        <a href="kegiatan.html">
+            Kegiatan
+        </a>
+
+        <a href="artikel.html">
+            Artikel
+        </a>
+
+    </div>
+
+
+
+    <div class="footer-column">
+
+        <h4>
+            Kontak
+        </h4>
+
+        <p>
+            RT 08, Kelurahan Pagerkukuh,
+            Kabupaten Wonosobo,
+            Jawa Tengah
+        </p>
+
+        <p>
+            kartarwistaramadhika@gmail.com
+        </p>
+
+        <p>
+            Wistara Madhika Official
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+    © 2026 Karang Taruna Wistara Madhika.
+    Seluruh hak cipta dilindungi.
+
+</div>
+```
+
+</footer>
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+const hariIni =
+    new Date()
+        .toISOString()
+        .split("T")[0];
+
+
+let transaksi =
+    JSON.parse(
+        localStorage.getItem(
+            "transaksiKartar"
+        )
+    ) || [];
+
+
+let kasAnggota =
+    JSON.parse(
+        localStorage.getItem(
+            "kasAnggotaKartar"
+        )
+    ) || [];
+
+
+function buatId() {
+
+    return (
+        Date.now().toString() +
+        Math.random()
+            .toString(36)
+            .substring(2, 9)
+    );
+
+}
+
+
+function migrasiIdDataLama() {
+
+    let adaPerubahan = false;
+
+
+    kasAnggota =
+        kasAnggota.map(
+            function(item) {
+
+                if (!item.id) {
+
+                    adaPerubahan = true;
+
+                    return {
+                        ...item,
+                        id: buatId()
+                    };
+
+                }
+
+                return item;
+
+            }
+        );
+
+
+    transaksi =
+        transaksi.map(
+            function(item) {
+
+                if (!item.id) {
+
+                    adaPerubahan = true;
+
+                    return {
+                        ...item,
+                        id: buatId()
+                    };
+
+                }
+
+                return item;
+
+            }
+        );
+
+
+    if (adaPerubahan) {
+        simpanData();
+    }
+
+}
+
+
+let editKasId = null;
+
+let editTransaksiId = null;
+
+
+function formatRupiah(angka) {
+
+    return new Intl.NumberFormat(
+        "id-ID",
+        {
+            style: "currency",
+            currency: "IDR",
+            minimumFractionDigits: 0
+        }
+    ).format(
+        Number(angka) || 0
+    );
+
+}
+
+
+function formatTanggal(tanggal) {
+
+    if (!tanggal) {
+        return "-";
+    }
+
+
+    const bagian =
+        String(tanggal).split("-");
+
+
+    if (bagian.length !== 3) {
+        return tanggal;
+    }
+
+
+    return (
+        bagian[2] +
+        "/" +
+        bagian[1] +
+        "/" +
+        bagian[0]
+    );
+
+}
+
+
+function escapeHtml(teks) {
+
+    return String(teks ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+function simpanData() {
+
+    localStorage.setItem(
+        "kasAnggotaKartar",
+        JSON.stringify(
+            kasAnggota
+        )
+    );
+
+
+    localStorage.setItem(
+        "transaksiKartar",
+        JSON.stringify(
+            transaksi
+        )
+    );
+
+}
+
+
+function tampilkanKasAnggota() {
+
+    const table =
+        document.getElementById(
+            "kasAnggotaTable"
+        );
+
+
+    table.innerHTML = "";
+
+
+    if (kasAnggota.length === 0) {
+
+        table.innerHTML = `
+            <tr>
+                <td colspan="5">
+                    Belum ada pembayaran kas anggota.
+                </td>
+            </tr>
+        `;
+
+        return;
+
+    }
+
+
+    const dataUrut =
+        [...kasAnggota].sort(
+            function(a, b) {
+
+                return (
+                    new Date(b.tanggal) -
+                    new Date(a.tanggal)
+                );
+
+            }
+        );
+
+
+    dataUrut.forEach(
+        function(item) {
+
+            const row =
+                document.createElement(
+                    "tr"
+                );
+
+
+            row.innerHTML = `
+
+                <td>
+                    ${escapeHtml(item.nama)}
+                </td>
+
+                <td>
+                    ${escapeHtml(item.bulan)}
+                </td>
+
+                <td>
+                    ${formatRupiah(item.nominal)}
+                </td>
+
+                <td>
+                    ${formatTanggal(item.tanggal)}
+                </td>
+
+                <td>
+
+                    <button
+                        type="button"
+                        class="table-button edit-button"
+                        onclick="editKas('${escapeHtml(item.id)}')"
+                    >
+                        ✏️ Edit
+                    </button>
+
+                    <button
+                        type="button"
+                        class="table-button delete-button"
+                        onclick="hapusKas('${escapeHtml(item.id)}')"
+                    >
+                        🗑️ Hapus
+                    </button>
+
+                </td>
+
+            `;
+
+
+            table.appendChild(row);
+
+        }
+    );
+
+}
+
+
+function tampilkanTransaksi() {
+
+    const table =
+        document.getElementById(
+            "transaksiTable"
+        );
+
+
+    table.innerHTML = "";
+
+
+    if (transaksi.length === 0) {
+
+        table.innerHTML = `
+            <tr>
+                <td colspan="7">
+                    Belum ada transaksi.
+                </td>
+            </tr>
+        `;
+
+        return;
+
+    }
+
+
+    const semuaTransaksi =
+        [...transaksi].sort(
+            function(a, b) {
+
+                return (
+                    new Date(b.tanggal) -
+                    new Date(a.tanggal)
+                );
+
+            }
+        );
+
+
+    semuaTransaksi.forEach(
+        function(item) {
+
+            const row =
+                document.createElement(
+                    "tr"
+                );
+
+
+            let danaMasuk = "-";
+
+            let danaKeluar = "-";
+
+
+            if (
+                item.jenis === "masuk"
+            ) {
+
+                danaMasuk =
+                    formatRupiah(
+                        item.nominal
+                    );
+
+            }
+
+
+            if (
+                item.jenis === "keluar"
+            ) {
+
+                danaKeluar =
+                    formatRupiah(
+                        item.nominal
+                    );
+
+            }
+
+
+            row.innerHTML = `
+
+                <td>
+                    ${formatTanggal(item.tanggal)}
+                </td>
+
+                <td>
+                    ${escapeHtml(item.nama)}
+                </td>
+
+                <td>
+                    ${escapeHtml(item.sumber)}
+                </td>
+
+                <td>
+                    ${escapeHtml(item.keterangan)}
+                </td>
+
+                <td>
+                    ${danaMasuk}
+                </td>
+
+                <td>
+                    ${danaKeluar}
+                </td>
+
+                <td>
+
+                    <button
+                        type="button"
+                        class="table-button edit-button"
+                        onclick="editTransaksi('${escapeHtml(item.id)}')"
+                    >
+                        ✏️ Edit
+                    </button>
+
+                    <button
+                        type="button"
+                        class="table-button delete-button"
+                        onclick="hapusTransaksi('${escapeHtml(item.id)}')"
+                    >
+                        🗑️ Hapus
+                    </button>
+
+                </td>
+
+            `;
+
+
+            table.appendChild(row);
+
+        }
+    );
+
+}
+
+
+function updateRingkasan() {
+
+    let totalMasuk = 0;
+
+    let totalKeluar = 0;
+
+
+    transaksi.forEach(
+        function(item) {
+
+            const nominal =
+                Number(item.nominal) || 0;
+
+
+            if (
+                item.jenis === "masuk"
+            ) {
+
+                totalMasuk += nominal;
+
+            }
+
+
+            if (
+                item.jenis === "keluar"
+            ) {
+
+                totalKeluar += nominal;
+
+            }
+
+        }
+    );
+
+
+    kasAnggota.forEach(
+        function(item) {
+
+            totalMasuk +=
+                Number(item.nominal) || 0;
+
+        }
+    );
+
+
+    const saldo =
+        totalMasuk -
+        totalKeluar;
+
+
+    document.getElementById(
+        "totalMasuk"
+    ).textContent =
+        formatRupiah(
+            totalMasuk
+        );
+
+
+    document.getElementById(
+        "totalKeluar"
+    ).textContent =
+        formatRupiah(
+            totalKeluar
+        );
+
+
+    document.getElementById(
+        "saldoOrganisasi"
+    ).textContent =
+        formatRupiah(
+            saldo
+        );
+
+}
+
+
+function resetFormKas() {
+
+    const form =
+        document.getElementById(
+            "kasForm"
+        );
+
+
+    form.reset();
+
+
+    document.getElementById(
+        "nominalKas"
+    ).value = 10000;
+
+
+    document.getElementById(
+        "tanggalKas"
+    ).value = hariIni;
+
+
+    document.getElementById(
+        "judulKasForm"
+    ).textContent =
+        "Tambah Pembayaran Iuran";
+
+
+    document.getElementById(
+        "tombolKas"
+    ).textContent =
+        "Tambah Pembayaran";
+
+
+    document.getElementById(
+        "batalEditKas"
+    ).style.display =
+        "none";
+
+
+    editKasId = null;
+
+}
+
+
+function resetFormTransaksi() {
+
+    const form =
+        document.getElementById(
+            "transaksiForm"
+        );
+
+
+    form.reset();
+
+
+    document.getElementById(
+        "tanggalTransaksi"
+    ).value = hariIni;
+
+
+    document.getElementById(
+        "judulTransaksiForm"
+    ).textContent =
+        "Tambah Transaksi";
+
+
+    document.getElementById(
+        "tombolTransaksi"
+    ).textContent =
+        "Simpan Transaksi";
+
+
+    document.getElementById(
+        "batalEditTransaksi"
+    ).style.display =
+        "none";
+
+
+    editTransaksiId = null;
+
+}
+
+
+function editKas(id) {
+
+    const index =
+        kasAnggota.findIndex(
+            function(item) {
+
+                return String(item.id) ===
+                    String(id);
+
+            }
+        );
+
+
+    if (index === -1) {
+
+        alert(
+            "Data pembayaran tidak ditemukan."
+        );
+
+        return;
+
+    }
+
+
+    const item =
+        kasAnggota[index];
+
+
+    document.getElementById(
+        "namaAnggota"
+    ).value =
+        item.nama;
+
+
+    document.getElementById(
+        "bulanKas"
+    ).value =
+        item.bulan;
+
+
+    document.getElementById(
+        "nominalKas"
+    ).value =
+        10000;
+
+
+    document.getElementById(
+        "tanggalKas"
+    ).value =
+        item.tanggal;
+
+
+    editKasId =
+        item.id;
+
+
+    document.getElementById(
+        "judulKasForm"
+    ).textContent =
+        "Edit Pembayaran Iuran";
+
+
+    document.getElementById(
+        "tombolKas"
+    ).textContent =
+        "Simpan Perubahan";
+
+
+    document.getElementById(
+        "batalEditKas"
+    ).style.display =
+        "inline-block";
+
+
+    document.getElementById(
+        "kasForm"
+    ).scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+function hapusKas(id) {
+
+    const index =
+        kasAnggota.findIndex(
+            function(item) {
+
+                return String(item.id) ===
+                    String(id);
+
+            }
+        );
+
+
+    if (index === -1) {
+
+        alert(
+            "Data pembayaran tidak ditemukan."
+        );
+
+        return;
+
+    }
+
+
+    const item =
+        kasAnggota[index];
+
+
+    const yakin =
+        confirm(
+            "Yakin ingin menghapus pembayaran kas " +
+            item.nama +
+            " untuk bulan " +
+            item.bulan +
+            " sebesar " +
+            formatRupiah(item.nominal) +
+            "?"
+        );
+
+
+    if (!yakin) {
+        return;
+    }
+
+
+    kasAnggota.splice(
+        index,
+        1
+    );
+
+
+    simpanData();
+
+    tampilkanKasAnggota();
+
+    updateRingkasan();
+
+
+    if (
+        String(editKasId) ===
+        String(id)
+    ) {
+
+        resetFormKas();
+
+    }
+
+
+    alert(
+        "Pembayaran kas berhasil dihapus."
+    );
+
+}
+
+
+function editTransaksi(id) {
+
+    const index =
+        transaksi.findIndex(
+            function(item) {
+
+                return String(item.id) ===
+                    String(id);
+
+            }
+        );
+
+
+    if (index === -1) {
+
+        alert(
+            "Data transaksi tidak ditemukan."
+        );
+
+        return;
+
+    }
+
+
+    const item =
+        transaksi[index];
+
+
+    document.getElementById(
+        "tanggalTransaksi"
+    ).value =
+        item.tanggal;
+
+
+    document.getElementById(
+        "namaTransaksi"
+    ).value =
+        item.nama;
+
+
+    document.getElementById(
+        "sumberDana"
+    ).value =
+        item.sumber;
+
+
+    document.getElementById(
+        "jenisTransaksi"
+    ).value =
+        item.jenis;
+
+
+    document.getElementById(
+        "keteranganTransaksi"
+    ).value =
+        item.keterangan;
+
+
+    document.getElementById(
+        "nominalTransaksi"
+    ).value =
+        item.nominal;
+
+
+    editTransaksiId =
+        item.id;
+
+
+    document.getElementById(
+        "judulTransaksiForm"
+    ).textContent =
+        "Edit Transaksi";
+
+
+    document.getElementById(
+        "tombolTransaksi"
+    ).textContent =
+        "Simpan Perubahan";
+
+
+    document.getElementById(
+        "batalEditTransaksi"
+    ).style.display =
+        "inline-block";
+
+
+    document.getElementById(
+        "transaksiForm"
+    ).scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+function hapusTransaksi(id) {
+
+    const index =
+        transaksi.findIndex(
+            function(item) {
+
+                return String(item.id) ===
+                    String(id);
+
+            }
+        );
+
+
+    if (index === -1) {
+
+        alert(
+            "Data transaksi tidak ditemukan."
+        );
+
+        return;
+
+    }
+
+
+    const item =
+        transaksi[index];
+
+
+    const yakin =
+        confirm(
+            "Yakin ingin menghapus transaksi ini?\n\n" +
+            item.nama +
+            " - " +
+            formatRupiah(item.nominal) +
+            "\n" +
+            item.keterangan
+        );
+
+
+    if (!yakin) {
+        return;
+    }
+
+
+    transaksi.splice(
+        index,
+        1
+    );
+
+
+    simpanData();
+
+    tampilkanTransaksi();
+
+    updateRingkasan();
+
+
+    if (
+        String(editTransaksiId) ===
+        String(id)
+    ) {
+
+        resetFormTransaksi();
+
+    }
+
+
+    alert(
+        "Transaksi berhasil dihapus."
+    );
+
+}
+
+
+document
+    .getElementById("kasForm")
+    .addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const nama =
+                document
+                    .getElementById(
+                        "namaAnggota"
+                    )
+                    .value
+                    .trim();
+
+
+            const bulan =
+                document
+                    .getElementById(
+                        "bulanKas"
+                    )
+                    .value;
+
+
+            const nominal =
+                Number(
+                    document
+                        .getElementById(
+                            "nominalKas"
+                        )
+                        .value
+                );
+
+
+            const tanggal =
+                document
+                    .getElementById(
+                        "tanggalKas"
+                    )
+                    .value;
+
+
+            if (!nama) {
+
+                alert(
+                    "Nama anggota wajib diisi."
+                );
+
+                return;
+
+            }
+
+
+            if (!bulan) {
+
+                alert(
+                    "Silakan pilih bulan pembayaran."
+                );
+
+                return;
+
+            }
+
+
+            if (!tanggal) {
+
+                alert(
+                    "Tanggal pembayaran wajib diisi."
+                );
+
+                return;
+
+            }
+
+
+            if (nominal !== 10000) {
+
+                alert(
+                    "Nominal iuran kas harus Rp10.000."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                editKasId !== null
+            ) {
+
+                const index =
+                    kasAnggota.findIndex(
+                        function(item) {
+
+                            return String(item.id) ===
+                                String(editKasId);
+
+                        }
+                    );
+
+
+                if (index === -1) {
+
+                    alert(
+                        "Data pembayaran tidak ditemukan."
+                    );
+
+                    resetFormKas();
+
+                    return;
+
+                }
+
+
+                const duplikat =
+                    kasAnggota.some(
+                        function(item) {
+
+                            return (
+                                String(item.id) !==
+                                String(editKasId)
+
+                                &&
+
+                                String(item.nama)
+                                    .trim()
+                                    .toLowerCase() ===
+                                nama
+                                    .trim()
+                                    .toLowerCase()
+
+                                &&
+
+                                item.bulan ===
+                                bulan
+                            );
+
+                        }
+                    );
+
+
+                if (duplikat) {
+
+                    alert(
+                        "Pembayaran anggota untuk bulan tersebut sudah tercatat."
+                    );
+
+                    return;
+
+                }
+
+
+                kasAnggota[index] = {
+
+                    id:
+                        kasAnggota[index].id,
+
+                    nama:
+                        nama,
+
+                    bulan:
+                        bulan,
+
+                    nominal:
+                        10000,
+
+                    tanggal:
+                        tanggal
+
+                };
+
+
+                simpanData();
+
+                tampilkanKasAnggota();
+
+                updateRingkasan();
+
+                resetFormKas();
+
+
+                alert(
+                    "Data pembayaran kas berhasil diperbarui."
+                );
+
+                return;
+
+            }
+
+
+            const sudahAda =
+                kasAnggota.some(
+                    function(item) {
+
+                        return (
+                            String(item.nama)
+                                .trim()
+                                .toLowerCase() ===
+                            nama
+                                .trim()
+                                .toLowerCase()
+
+                            &&
+
+                            item.bulan ===
+                            bulan
+                        );
+
+                    }
+                );
+
+
+            if (sudahAda) {
+
+                alert(
+                    "Pembayaran anggota untuk bulan tersebut sudah tercatat."
+                );
+
+                return;
+
+            }
+
+
+            const dataKas = {
+
+                id:
+                    buatId(),
+
+                nama:
+                    nama,
+
+                bulan:
+                    bulan,
+
+                nominal:
+                    10000,
+
+                tanggal:
+                    tanggal
+
+            };
+
+
+            kasAnggota.push(
+                dataKas
+            );
+
+
+            simpanData();
+
+            tampilkanKasAnggota();
+
+            updateRingkasan();
+
+            resetFormKas();
+
+
+            alert(
+                "Pembayaran kas anggota berhasil ditambahkan."
+            );
+
+        }
+    );
+
+
+document
+    .getElementById(
+        "transaksiForm"
+    )
+    .addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const tanggal =
+                document
+                    .getElementById(
+                        "tanggalTransaksi"
+                    )
+                    .value;
+
+
+            const nama =
+                document
+                    .getElementById(
+                        "namaTransaksi"
+                    )
+                    .value
+                    .trim();
+
+
+            const sumber =
+                document
+                    .getElementById(
+                        "sumberDana"
+                    )
+                    .value;
+
+
+            const jenis =
+                document
+                    .getElementById(
+                        "jenisTransaksi"
+                    )
+                    .value;
+
+
+            const keterangan =
+                document
+                    .getElementById(
+                        "keteranganTransaksi"
+                    )
+                    .value
+                    .trim();
+
+
+            const nominal =
+                Number(
+                    document
+                        .getElementById(
+                            "nominalTransaksi"
+                        )
+                        .value
+                );
+
+
+            if (!tanggal) {
+
+                alert(
+                    "Tanggal transaksi wajib diisi."
+                );
+
+                return;
+
+            }
+
+
+            if (!nama) {
+
+                alert(
+                    "Nama transaksi wajib diisi."
+                );
+
+                return;
+
+            }
+
+
+            if (!sumber) {
+
+                alert(
+                    "Silakan pilih sumber dana."
+                );
+
+                return;
+
+            }
+
+
+            if (!jenis) {
+
+                alert(
+                    "Silakan pilih jenis transaksi."
+                );
+
+                return;
+
+            }
+
+
+            if (!keterangan) {
+
+                alert(
+                    "Keterangan transaksi wajib diisi."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                !Number.isFinite(nominal) ||
+                nominal <= 0
+            ) {
+
+                alert(
+                    "Nominal transaksi harus lebih dari Rp0."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                editTransaksiId !== null
+            ) {
+
+                const index =
+                    transaksi.findIndex(
+                        function(item) {
+
+                            return String(item.id) ===
+                                String(editTransaksiId);
+
+                        }
+                    );
+
+
+                if (index === -1) {
+
+                    alert(
+                        "Data transaksi tidak ditemukan."
+                    );
+
+                    resetFormTransaksi();
+
+                    return;
+
+                }
+
+
+                transaksi[index] = {
+
+                    id:
+                        transaksi[index].id,
+
+                    tanggal:
+                        tanggal,
+
+                    nama:
+                        nama,
+
+                    sumber:
+                        sumber,
+
+                    jenis:
+                        jenis,
+
+                    keterangan:
+                        keterangan,
+
+                    nominal:
+                        nominal
+
+                };
+
+
+                simpanData();
+
+                tampilkanTransaksi();
+
+                updateRingkasan();
+
+                resetFormTransaksi();
+
+
+                alert(
+                    "Data transaksi berhasil diperbarui."
+                );
+
+                return;
+
+            }
+
+
+            const dataTransaksi = {
+
+                id:
+                    buatId(),
+
+                tanggal:
+                    tanggal,
+
+                nama:
+                    nama,
+
+                sumber:
+                    sumber,
+
+                jenis:
+                    jenis,
+
+                keterangan:
+                    keterangan,
+
+                nominal:
+                    nominal
+
+            };
+
+
+            transaksi.push(
+                dataTransaksi
+            );
+
+
+            simpanData();
+
+            tampilkanTransaksi();
+
+            updateRingkasan();
+
+            resetFormTransaksi();
+
+
+            alert(
+                "Transaksi berhasil disimpan."
+            );
+
+        }
+    );
+
+
+document
+    .getElementById(
+        "batalEditKas"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            resetFormKas();
+
+        }
+    );
+
+
+document
+    .getElementById(
+        "batalEditTransaksi"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            resetFormTransaksi();
+
+        }
+    );
+
+
+migrasiIdDataLama();
+
+
+document
+    .getElementById(
+        "tanggalKas"
+    )
+    .value =
+    hariIni;
+
+
+document
+    .getElementById(
+        "tanggalTransaksi"
+    )
+    .value =
+    hariIni;
+
+
+document
+    .getElementById(
+        "nominalKas"
+    )
+    .value =
+    10000;
+
+
+tampilkanKasAnggota();
+
+tampilkanTransaksi();
+
+updateRingkasan();
+
+</script>
+
+</body>
+
+</html>
